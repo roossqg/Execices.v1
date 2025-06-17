@@ -1,30 +1,35 @@
-#verificar se uma frase possuí a palavra "silva"
+#verificar se uma frase possui a palavra "silva"
 slk=input('digite uma frase: ').lower().strip()
-#encontra o valor da primeira letra de "silva",corta o que está atrás em uma lista e junta novamente em uma str
+
+#encontra o valor da primeira letra de "silva",corta o que está atrás em uma lista
+#e junta novamente em uma str
 sdf=slk.find('silva')
 slk21=slk[sdf::].split()
 slk2=' '.join(slk21)
 print(slk2)
+
 #encontra o primeiro espaço a partir de "silva"
 sdf3=slk2[0::].find(' ')
 if sdf3==-1:
    #sem espaço(final ou solo)
    sdf2=len(slk2)
+
     #conta se possui 5 letras até o final,não ultrapassando o silva
    if sdf2==5:
     print(' a frase contém a palavra silva')
     print(sdf2,sdf3)
+
+  #se o espaço estiver na posição 5,significa que possui 5 caracteres(0-4)
 if sdf3==5:
  sdf9=len(slk2[:sdf3:])
  if sdf9==5:
-  #se o espaço estiver na posição 5,significa que possui 5 caracteres(0-4)
   print(' a frase contém a palavra silva')
   print(sdf9,sdf3)
 else:
-   print('você não é silva')
+   print('a frase não contém a palavra  silva')
+#não testei com "silva " kkkkk
 
-
-#verificar cidades com iniciais de santo:git
+#verificar cidades com iniciais de santo
 dig22=input('digite um nome de uma cidade: ')
 dig2=dig22.low()
 dig=dig2.title()
@@ -38,7 +43,6 @@ else:
 
 
 #ler nomes
-#espaços podem se reperesentados como : " "
 name=input('digite seu nome: ')
 nm2=name.upper()
 nm3=name.lower()
